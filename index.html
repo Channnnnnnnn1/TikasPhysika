@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TikasPhysika.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .close-btn{
+            margin: 0px 0px 0px 1100px
+        }
+    </style>
+    <title>Tikas Physika</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <a class="logo" href="index.html">
+            <img src="img/TPLOGO.png" alt="logo" width="50px" height="50px">
+        </a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="AboutUs.html">ABOUT US</a></li>
+                <li><a href="Shopping.html">OUR SHOP</a></li>
+                <li><a href="Appointment.html">APPOINT NOW</a></li>     
+            </ul>
+        </nav>
+        <a class="menu cta">
+            <img src="img/menu.png" alt="menu" width="30px">
+        </a>
+    </header>
+    <!-- Nav Bar End -->
+    <!-- Nav Bar Mobile Start -->
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="AboutUs.html">About Us</a>
+            <a href="Appointment.html">Appointment</a>
+            <a href="Shopping.html">Our Shop</a>
+        </div>
+    </div>
+    <!-- Nav Bar Mobile End -->
+
+    <!-- Content -->
+    <section class="firstSection">
+        <div class="leftSide" style="flex-basis: 50%;">
+            <h1>
+                TIKAS PHYSIKA
+            </h1>   
+            <p>Unlock your potential with our free fitness workout program! Say goodbye to costly gym memberships and hello to a healthier, happier you. Our carefully crafted workouts cater to all fitness levels, providing a personalized journey to reach your goals. Whether you're a beginner or a seasoned pro, our program offers diverse routines, expert guidance, and the flexibility to exercise on your terms. It's not just a workout; it's a lifestyle upgrade. Choose us for a transformative fitness experience that won't break the bank.</p>
+            <button class="appointButton"><a href="Appointment.html">Appoint Now!</a></button>
+        </div>
+        <div class="cardBox" style="flex-basis: 50%;">
+            <div class="Card Card1" onclick="togglePopup('popup-1')">
+                <h3>TRAINERS</h3>
+            </div>
+            <div class="Card Card2" onclick="togglePopup('popup-2')">
+                <h3>NUTRITIONIST</h3>
+            </div>
+            <div class="Card Card3" onclick="togglePopup('popup-3')">
+                <h3>EQUIPMENTS</h3>
+            </div>
+            <div class="Card Card4" onclick="togglePopup('popup-4')">
+                <h3>PRODUCTS</h3>
+            </div>
+        </div>
+    <!-- Popup -->
+        <div class="popup" id="popup-1">
+            <div class="overlaying"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-1')">&times;</div>
+                <div class="Maincontent">
+                    <img src="img/MTulagan.jpg" alt="Mark Tulagan" width="250px">
+                    <div class="textualContent">
+                        <h2>MARK JUSTINE TULAGAN</h2>
+                        <h3>BULKING</h3>
+                        <h3>Description</h3>
+                        <p>
+                            Meet Mark Justine Tulagan, your dedicated personal trainer specializing in bulking and muscle growth. With his expertise in exercise science, Mark designs personalized programs to maximize muscle hypertrophy and strength gains. Get ready to achieve your desired physique with Mark's guidance. Let's start building your dream physique today!</p>
+                        <button class="Appoint-Button"><a href="Appointment.html">Appoint now</a></button>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/SIIbarra.png" alt="Ivell Ibarra" width="250px">
+                    <div class="textualContent">
+                        <h2>IVELL IBARRA</h2>
+                        <h3>CUTTING</h3>
+                        <h3>Description</h3>
+                        <p>
+                            Meet Ivell Ibarra, your dedicated personal trainer specializing in cutting and body recomposition. With expertise in fitness and nutrition, Ivell creates personalized programs to shed body fat while preserving muscle mass. With Ivell's commitment to your success, get ready to reveal your best self. Let's start sculpting your dream physique today!</p>
+                        <button class="Appoint-Button"><a href="Appointment.html">Appoint now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup-2">
+            <div class="overlaying"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-2')">&times;</div>
+                <div class="Maincontent">
+                    <img src="img/AAnsing.jpg" alt="Archer Ansing" width="250px">
+                    <div class="textualContent">
+                        <h2>ARCHER ANSING</h2>
+                        <h3>BULKING</h3>
+                        <h3>Description</h3>
+                        <p>As a nutritionist specializing in bulking strategies, I craft customized meal plans to support muscle growth and strength. By balancing macronutrients and optimizing calories, I help individuals reach their bulking goals. Whether advising on protein-rich foods, strategic carbohydrates, or essential fats, I prioritize sustainable and healthy muscle development.</p>
+                        <button class="Appoint-Button"><a href="Appointment.html">Appoint now</a></button>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/MDayag.jpg" alt="Miguel Dayag" width="250px">
+                    <div class="textualContent">
+                        <h2>Miguel Dayag</h2>
+                        <h3>CUTTING</h3>
+                        <h3>Description</h3>
+                        <p>A cutting plan, crafted by a nutritionist, aids in reducing body fat and achieving weight loss goals. It involves decreasing calorie intake while ensuring nutrient balance. Recommendations cover portion control, meal timing, and food choices. Behavior modification strategies foster long-term success.</p>
+                        <button class="Appoint-Button"><a href="Appointment.html">Appoint now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup-3">
+            <div class="overlaying"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-3')">&times;</div>
+                <div class="Maincontent">
+                    <img src="img/PullUpBar.jpeg" alt="Pull Up Bar" width="250px">
+                    <div class="textualContent">
+                        <h2>Pull Up Bar</h2>
+                        <h3>Description</h3>
+                        <p>Pull-up bars are bars mounted on a doorframe or affixed to a sturdy structure, used primarily for pull-up and chin-up exercises to strengthen the upper body, particularly the back and arms. </p>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/PushupBoard.jpeg" alt="Push up Board" width="250px">
+                    <div class="textualContent">
+                        <h2>Push Up Board</h2>
+                        <h3 class="TCDescription" >Description</h3>
+                        <p>Push-up boards are platforms with handles designed to assist with proper push-up form and target specific muscle groups by varying hand placement and angle during the exercise.</p>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/Dumbbell.jpeg" alt="Dumbbell" width="250px">
+                    <div class="textualContent">
+                        <h2>Dumbbell</h2>
+                        <h3 class="TCDescription" >Description</h3>
+                        <p>dumbbells are handheld weights used for strength training. They come in various sizes and are versatile for targeting different muscle groups in workouts.</p>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/ResistanceBand.jpeg" alt="Resistance Band" width="250px">
+                    <div class="textualContent">
+                        <h2>Resistance Band</h2>
+                        <h3 class="TCDescription" >Description</h3>
+                        <p>Resistance bands are elastic bands used for strength training exercises. They come in different resistance levels and can be used for various workouts targeting different muscle groups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup-4">
+            <div class="overlaying"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-4')">&times;</div>
+                <div class="Maincontent">
+                    <img src="img/TitaniumWhey.png" alt="Titanium Whey" width="250px">
+                    <div class="textualContent">
+                        <h2>Titanium Whey</h2>
+                        <h3>Description</h3>
+                        <p>All the hard work you put in at the gym would be wasted without taking action to preserve the muscle you already have and to repair the damage done during your workouts. The gym is where you go to break muscle down, so it’s imperative that you have the best protein formula available to preserve and build more muscle and strength.</p>
+                        <button class="Buynow-Button"><a href="Order.html">Buy Now</a></button>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/WheyShred.png" alt="Whey   Shred" width="250px">
+                    <div class="textualContent">
+                        <h2>Whey Shred</h2>
+                        <h3>Description</h3>
+                        <p>GET YOUR HANDS ON OUR WHEY SHRED LEAN PROTEIN.
+                            Whey Shred Combines decades of SAN's expertise in protein and weight-loss formulas into one ultimate MUSCLE-BUILDING and FAT-BURNING Protein Powder. Premium whey protein ensures all your efforts result in quality muscle gains while losing fats at the same time.</p>
+                        <button class="Buynow-Button"><a href="Order.html">Buy Now</a></button>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/PerformanceCreatine.png" alt="Performance" width="250px">
+                    <div class="textualContent">
+                        <h2>Performance Creatine</h2>
+                        <h3>Description</h3>
+                        <p>PERFORMANCE CREATINE increases muscle power and size beyond the limits of non-micronized creatine Monohydrate.</p>
+                        <button class="Buynow-Button"><a href="Order.html">Buy Now</a></button>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/Lipo6.png" alt="Lipo 6 Fat Burner" width="250px">
+                    <div class="textualContent">
+                        <h2>Lipo 6</h2>
+                        <h3>Description</h3>
+                        <p>With LIPO6 BLACK NIGHTTIME you can successfully address these. First, LIPO6 BLACK NIGHTTIME helps increase calorie burning while you sleep. By supporting your resting metabolic rate, it helps create an environment that is more conducive to overnight fat-burning.</p>
+                        <button class="Buynow-Button"><a href="Order.html">Buy Now</a></button>
+                    </div>
+                </div>
+                <div class="Maincontent">
+                    <img src="img/Zero.png" alt="Electrolyte Zero" width="250px">
+                    <div class="textualContent">
+                        <h2>Electrolyte Zero</h2>
+                        <h3>Description</h3>
+                        <p>Cheap yet Reliable Hydration tablets Easy to carry. Just add water! Proven in long rides. Keeps you going during 200KM and 300KM events.</p>
+                        <button class="Buynow-Button"><a href="Order.html">Buy Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Popup -->
+    <!-- Content Ends -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                        <li><a href="ToS.html">Terms of Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Need help?</h4>
+                    <ul>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyYMhZdU4Yig_GE4Qx1l4FjoTE9HtlsrcDs77SAVbBjd6auw/viewform">Report A Problem?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online Shop</h4>
+                    <ul>
+                        <li><a href="Shopping.html">Our Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.github.com/" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        <a href="https://www.discord.com/" target="_blank">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <!-- Footer Ends -->
+    <script type="text/javascript" src="TikasPhysika.js">
+        
+    </script>
+</body>
+</html>

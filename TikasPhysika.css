@@ -1,0 +1,802 @@
+* 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #edf0f1;
+  font-family: 'Roboto' , sans-serif;
+}
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/anytime\ fitness.jpg);
+  background-position: 20px 50px 20px 50px;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 140px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 7% 50px 7%;
+  background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a,
+.overlay__content a {
+  font-family: 'Roboto' , sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.appointButton{
+  width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 12px 0;
+  background: #ffffff;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 5px 5px #000000;
+  transition: transform 0.5s ease-in-out;
+}
+@keyframes beatAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.appointButton:hover{
+  color: rgb(0, 0, 0);
+  background-color: #e5ff00;
+  box-shadow: 5px 5px #04a2ec;
+  border: #000 solid 1px;
+  transform: scale(1.2);
+  cursor: pointer;
+  animation: beatAnimation .5s infinite;
+}
+.appointButton > a{
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+}
+.appointButton > a:hover{
+  background-color: #e5ff00;
+  text-decoration: none;
+}
+
+.firstSection{
+  display: flex;
+  height: 88%;
+  align-items: center;
+  padding: 0px 200px 72px 200px;
+  justify-content: space-between;
+  
+}
+
+.cardBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: flex-end
+}
+
+.Card{
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  border: 3px rgb(107, 104, 104) solid;
+}
+.Card:hover{
+  transform: translateY(-10px);
+}
+.Card1{
+  background-image: url(img/SAITAMA.png);
+}
+.Card2{
+  background-image: url(img/nutritionist\ 123.png);
+}
+.Card3{
+  background-image: url(img/gym\ equip.png);
+}
+.Card4{
+  background-image: url(img/protein\ shake.png);
+}
+.cardBox > div{
+  display: flex;
+  justify-content: center;
+
+}
+/* Popup */
+.popup .overlaying{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+  display: none;
+}
+.TCDescription{
+  margin-bottom: -50px;
+}
+.popup .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(0,0,0,0.9);
+  width: 1200px;
+  height: 700px;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border: solid 5px rgb(51, 42, 42);
+  border-radius: 50px;
+}
+
+.popup .close-btn{
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.popup.active .overlaying{
+  display: block;
+}
+
+.popup.active .content{
+  transition: all 300ms ease;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.Maincontent {
+  display: flex;
+  margin: 50px;
+}
+
+.Maincontent > img {
+  border-radius: 30px;
+  border: 5px solid rgb(156, 99, 99);
+  margin-right: 20px;
+}
+.content{
+  overflow: scroll;
+  scrollbar-width: 0px;
+}
+
+.textualContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.textualContent > p,
+.textualContent > h2,
+.textualContent > h3 {
+  padding: 5px;
+  text-align: left;
+}
+
+.textualContent > button {
+  align-self: flex-end;
+  background-color: #000;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: grey solid 3px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: .3px;
+}
+.textualContent > button:hover{
+  color: rgb(0, 0, 0);
+  background-color: #e5ff00;
+  box-shadow: 5px 5px #04a2ec;
+  border: #000 solid 1px;
+  transform: scale(1.2);
+  cursor: pointer;
+  animation: beatAnimation .5s infinite;
+}
+.textualContent > a:hover{
+  color: rgb(0, 0, 0);
+  background-color: #e5ff00;
+  box-shadow: 5px 5px #04a2ec;
+  border: #000 solid 1px;
+  transform: scale(1.2);
+  cursor: pointer;
+  animation: beatAnimation .5s infinite;
+  letter-spacing: 2px;
+}
+.Buynow-Button > a{
+  text-decoration: none;
+  padding: 15px;
+}
+.Buynow-Button > a:hover{
+  text-decoration: none;
+  color: black;
+}
+.Appoint-Button > a{
+  text-decoration: none;
+  padding: 15px;
+}
+.Appoint-Button > a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+/* Popup */
+
+/* Shopping Hero Page */
+.Hero{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/bg.jpg);
+  background-position: 20px 50px 20px 50px;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+}
+.Hero > h1 {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 280px;
+}
+/* Shopping Hero Page End */
+/* Shoppping Content */
+.ShoppingSection{
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2px;
+}
+.ShoppingSection > h1 {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+}
+
+.ShoppingItems{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 68px;
+}
+.item{
+  border: #000 solid 5px;
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  margin: 0 auto 75px auto;
+  box-shadow: 10px 10px #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.desc{
+  margin: 20px 120px;
+  display: none;
+  transition: display 0.3s ease;
+}
+
+.desc > p{
+  margin: 10px 20px 10px 20px;
+}
+
+.Item1{
+  background-image: url(img/TitaniumWhey.png);
+}
+.Item2{
+  background-image: url(img/WheyShred.png);
+}
+.Item3{
+  background-image: url(img/PerformanceCreatine.png);
+}
+.Item4{
+  background-image: url(img/Lipo6.png);
+}
+.Item5{
+  background-image: url(img/Zero.png);
+}
+/* Shopping Content End */
+/* Form Shopping Start*/
+.Order-Section > h2 {
+  text-align: left;
+  margin-left: 200px;
+}
+.form-Shopping > div{
+  margin: 20px auto 20px auto;
+}
+.form-Shopping > button{
+  color: #0c0b0b;
+  height: 45px;
+  width: 100px;
+  margin-bottom: 50px;
+  border-radius: 100px;
+}
+
+.OrderContainer {
+  display: flex;
+  justify-content: center; /* Horizontally center the form */
+  align-items: center; /* Vertically center the form */
+  height: 100%; /* Adjust the height of the container as needed */
+}
+
+.form-Shopping{
+  margin: 20px 0px 50px 0px;
+  border: 5px solid rgb(0, 0, 0);
+  padding: 0px 200px 0px 200px;
+  background-color: rgba(48, 45, 45, 0.7);
+  border-radius: 50px ;
+}
+label{
+  width: 450px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+input{
+  background-color: rgba(48, 45, 45, 0.7);
+  border-radius: 50px;
+  border: #9b9191 solid 2PX;
+  height: 30px;
+  padding: 5px 10px 5px 10px;
+  width: 250px;
+}
+/* From Shopping Ends */
+/* Form Appointment */
+.Order-Section > h2 {
+  text-align: left;
+  margin-left: 200px;
+}
+.form-Appoint > div{
+  margin: 20px auto 20px auto;
+}
+.form-Appoint > button{
+  color: #0c0b0b;
+  height: 45px;
+  width: 100px;
+  margin-bottom: 50px;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 15px;
+}
+.form-Appoint > button:hover{
+  color: rgb(0, 0, 0);
+  background-color: #e5ff00;
+  box-shadow: 5px 5px #04a2ec;
+  border: #000 solid 1px;
+  transform: scale(1.2);
+  cursor: pointer;
+  animation: beatAnimation .5s infinite;
+}
+.OrderContainer {
+  display: flex;
+  justify-content: center; /* Horizontally center the form */
+  align-items: center; /* Vertically center the form */
+  height: 100%; /* Adjust the height of the container as needed */
+}
+
+.form-Appoint{
+  margin: 20px 0px 50px 0px;
+  border: 5px solid rgb(0, 0, 0);
+  padding: 0px 200px 0px 200px;
+  background-color: rgba(48, 45, 45, 0.7);
+  border-radius: 50px ;
+}
+label{
+  width: 450px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+.radio > input{
+  background-color: rgba(48, 45, 45, 0.7);
+  border-radius: 50px;
+  border: #9b9191 solid 2PX;
+  height: 30px;
+  padding: 5px 10px 5px 10px;
+  width: 250px;
+  margin-top: 20px;
+}
+/* Form Appointment Ends */
+/* FAQ */
+.sectionfaq {
+  display: flex;
+  justify-content: center; /* Horizontally center the section */
+}
+
+.faq { /* Set maximum width for the FAQ section */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  width: 75%;
+}
+.faq > h2{
+  margin-bottom: 50px;
+}
+
+.question {
+  background-color: rgb(46, 40, 40);
+  margin: 20px 0px 20px 0px;
+  border-radius: 50px;
+  height: 110px;
+}
+.question > h3, .question > p{
+  padding: 0px 100px 0px 100px;
+}
+.question > h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.question > p{
+  padding-bottom: 20px;
+}
+/* FAQ */
+/* About us */
+.MnV{
+  display: flex;
+  padding: 10px 25px 0px 25px;
+  margin: 0px 50px 20px 50px;
+}
+.textMnV{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:  center;
+  padding: 20px;
+  margin: 20px
+}
+
+.MnV > img{
+  padding: 20px;
+  margin-left: 10px;
+  width: 300px;
+}
+
+.textMnV > p, .textMnV > h2{
+  margin: 0px 50px 20px 50px;
+  
+}
+.ourGoal {
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  padding: 20px;
+  margin: 0px 90px 20px 90px;
+}
+.ourGoal > h2{
+  margin: 0px 0px 20px 0px;
+}
+.theTeam{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 90px 100px 90px
+}
+.theTeam > img{
+  border: 2px solid black;
+}
+.MOT > h2{
+  text-align: center;
+  margin: 0px 0px 40px 0px;
+}
+.imgTextCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgTextCont > h3, .imgTextCont > h4 {
+  margin-top: 10px;
+}
+/* About us end */
+
+
+/* Footer */
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+  margin-left: 75px;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+  padding: 50px 0;
+}
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+/* Footer Ends*/
+
+/* Terms of Services */
+.ToS{
+  width: 80%;
+  margin: 0 auto 50px auto;
+  padding: 10px;
+  background-color: rgba(19, 9, 9, 0.548);
+  border-radius: 20px;
+}
+
+.ToS > h2, .ToS > h3, .ToS > h4{
+  text-align: center;
+  margin: 20px;
+}
+.ToS > p, .ToS > ul, .ToS > li, .ToS > ol{
+  text-align: justify;
+  margin: 20px 80px 20px 80px;
+}
+.ToS > ul{
+  list-style-type: disc;
+  margin-left: 150px;
+}
+.ToS > ol{
+  margin-left: 150px;
+}
+.ToS > table, th, td{
+  border: solid rgb(112, 96, 96) 3px;
+  border-collapse: collapse;
+  margin: 0px auto 0px auto;
+}
+.ToS > table{
+  width: 80%;
+}
+.ToS > th, td{
+  height: 100px;
+  padding: 10px;
+}
+/* Terms of Services End */
+  /* Mobile Nav */
+  
+.menu{
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active{
+  width: 100%;
+}
+
+.overlay__content{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a{
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus{
+  color: #0088a9;
+}
+.overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+/* Mobile View ends */
+/* Responsiveness */
+@media screen and (max-height: 450px){
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+@media only screen and (max-width: 800px){ 
+  .firstSection{
+    display: block;
+  }
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media screen and (max-width: 1510px){
+  .firstSection{
+    display: block;
+  }
+  .cardBox {
+    margin: 75px auto 20px auto;
+    justify-content: center;
+  }
+  .Maincontent {
+    display: block;
+  }
+  .Maincontent > img{
+    height: 250px;
+    display: block;
+    margin: 0px auto 0px auto;
+  }
+}
+@media screen and (max-width: 1250px){
+  .popup .content{
+    width: auto;
+    height: 900px;
+  }
+  .content{
+    margin-top: 10em;
+  }
+  .TCDescription{
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 900px){
+  .firstSection{
+    display: block;
+    padding: 0px 100px 0px 100px;
+  }
+  h1{
+    font-size: 100px;
+    text-align: center;
+  }
+  .cardBox {
+    margin: 75px auto 20px auto;
+    justify-content: center;
+  }
+  .leftSide{
+    margin: 0px auto 0px auto;
+  }
+}
