@@ -800,6 +800,13 @@ ul{
   .form-Appoint{
     padding: 0px 25px 0px 25px;
   }
+  .question{
+    padding: 10px 0px 150px 0px;
+    text-align: center;
+  }
+  .faq > h2{
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 800px){ 
   .firstSection{
@@ -848,7 +855,7 @@ ul{
     padding: 0px 10px 0px 10px;
   }
 }
-@media screen and (max-width: 540px){
+@media screen and (max-width: 585px){
   h1{
     font-size: 70px;
     text-align: center;
@@ -860,10 +867,18 @@ ul{
   .item{
     margin-top: 20px;
   }
+  .question{
+    padding: 10px 0px 200px 0px;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 450px){
   .MnV > img{
     display: none;
+  }
+  .question{
+    padding: 10px 0px 350px 0px;
+    text-align: center;
   }
 }  
 @media screen and (max-height: 450px){
