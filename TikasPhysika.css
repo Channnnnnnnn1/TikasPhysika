@@ -732,28 +732,6 @@ ul{
 
 /* Mobile View ends */
 /* Responsiveness */
-@media screen and (max-height: 450px){
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .close {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-@media only screen and (max-width: 800px){ 
-  .firstSection{
-    display: block;
-  }
-  .nav__links,
-  .cta {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-}
 @media screen and (max-width: 1510px){
   .firstSection{
     display: block;
@@ -771,18 +749,28 @@ ul{
     margin: 0px auto 0px auto;
   }
 }
-@media screen and (max-width: 1250px){
-  .popup .content{
-    width: auto;
-    height: 900px;
+  @media screen and (max-width: 1250px){
+    .popup .content{
+      width: auto;
+      height: 900px;
+    }
+    .content{
+      margin-top: 10em;
+    }
+    .TCDescription{
+      margin-bottom: 0px;
+    }
+    .MnV{
+      display: block;
+    }
+    .MnV > img{
+      margin: 0px auto 0px auto;
+      display: block;
+    }
+    .form-Appoint{
+      padding: 0px 50px 0px 50px;
+    }
   }
-  .content{
-    margin-top: 10em;
-  }
-  .TCDescription{
-    margin-bottom: 0px;
-  }
-}
 @media screen and (max-width: 900px){
   .firstSection{
     display: block;
@@ -799,6 +787,66 @@ ul{
   .leftSide{
     margin: 0px auto 0px auto;
   }
+  .ShoppingItems{
+    display: block;
+  }
+  .item{
+    margin: 10px 40px 10px 40px;
+  }
+  .imgTextCont > img{
+    width: auto;
+    height: 150px;
+  }
+  .form-Appoint{
+    padding: 0px 25px 0px 25px;
+  }
+}
+@media only screen and (max-width: 800px){ 
+  .firstSection{
+    display: block;
+  }
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  .item{
+    margin: 0px auto 0px auto
+  }
+  .ShoppingItems{
+    display: block;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  .theTeam{
+    display: block;
+    margin: 0px 50px 100px 50px;
+    
+  }
+  .form-Appoint{
+    padding: 0px 0px 0px 0px;
+  }
+  .Order-Section > h2{
+    margin: 0px auto 0px auto;
+    text-align: center;
+  }
+  .OrderContainer{
+    text-align: center;
+  }
+  .form-Appoint > div{
+    width: auto;
+  }
+}
+@media screen and (max-width: 700px){
+  .textMnV > p, .textMnV > h2{
+    margin: 10px auto 20px auto;
+  }
+  .form-Appoint{
+    padding: 0px 10px 0px 10px;
+  }
 }
 @media screen and (max-width: 540px){
   h1{
@@ -808,5 +856,23 @@ ul{
   .firstSection{
     display: block;
     padding: 0px 50px 0px 50px;
+  }
+  .item{
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 450px){
+  .MnV > img{
+    display: none;
+  }
+}  
+@media screen and (max-height: 450px){
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
